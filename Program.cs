@@ -23,4 +23,4 @@ app.UseAuthorization();
 app.MapRazorPages();
 //    .WithStaticAssets();
 
-app.Run();
+app.Run($"http://0.0.0.0:8080");
