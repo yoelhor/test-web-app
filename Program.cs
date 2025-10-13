@@ -23,4 +23,9 @@ app.UseAuthorization();
 app.MapRazorPages();
 //    .WithStaticAssets();
 
-app.Run($"http://0.0.0.0:8080");
+// Get the port and host from environment variables, with defaults
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+var host = Environment.GetEnvironmentVariable("HOST") ?? "0.0.0.0";
+var url = $"http://{host}:{port}";
+
+app.Run(url);
