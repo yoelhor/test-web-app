@@ -32,4 +32,5 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 # Define the entry point to run the application
+ENV ASPNETCORE_URLS=http://0.0.0.0:8080
 ENTRYPOINT ["dotnet", "test-web-app.dll"]
