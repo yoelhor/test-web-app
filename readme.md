@@ -12,8 +12,7 @@ The general approach is to use a multi-stage build in your Dockerfile. This is a
 
 - https://www.youtube.com/watch?v=GAnT23KBSEI
 - [Run an ASP.NET Core app in Docker containers (Microsoft)](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-9.0)
-- https://cloud.google.com/blog/products/gcp/how-to-use-docker-to-run-aspnet-core-apps-on-google-app-engine
-- https://scriptbytes.io/deploy-net-core-api-to-google-cloud-run
+- [BLOG: Deploy a .Net Core API to Google Cloud Run](https://scriptbytes.io/deploy-net-core-api-to-google-cloud-run)
 
 ## Build and run Docker locally
 
