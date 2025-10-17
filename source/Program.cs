@@ -1,5 +1,4 @@
 using System;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,17 +14,17 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-// app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.MapGet("/", () => $"Hello world!");
-// app.UseRouting();
 
-// app.UseAuthorization();
+app.UseRouting();
 
-// app.MapStaticAssets();
-// app.MapRazorPages()
-//     .WithStaticAssets();
+app.UseAuthorization();
 
-// Get the port and host from environment variables, with defaults
+app.MapStaticAssets();
+app.MapRazorPages()
+   .WithStaticAssets();
+
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 var host = Environment.GetEnvironmentVariable("HOST") ?? "0.0.0.0";
 var url = $"http://{host}:{port}";
