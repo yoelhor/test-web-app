@@ -15,7 +15,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
-app.MapGet("/", () => $"Hello world 6666");
+app.MapGet("/info", () => $"Hello world 6666");
 
 app.UseRouting();
 

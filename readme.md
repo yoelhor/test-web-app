@@ -21,3 +21,17 @@ The general approach is to use a multi-stage build in your Dockerfile. This is a
 docker buildx build -t test-web-app .
 docker run -it --rm test-web-app
 ```
+
+## Appendix
+
+List containers: 
+
+```
+docker container ls
+```
+
+Get the container ID and list file in the container:
+
+```
+docker exec f359e0be74e3 ls
+```
