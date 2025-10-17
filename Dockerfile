@@ -25,6 +25,7 @@ RUN dotnet publish -c Release -o /app/publish --no-restore
 # Use the smaller ASP.NET Core 9.0 Runtime image for deployment
 # This image only contains what's needed to run the app, not the SDK
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
+EXPOSE 8080
 WORKDIR /app
 
 # Copy the published output from the build stage
