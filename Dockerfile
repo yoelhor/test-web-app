@@ -6,8 +6,9 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 # Sets the working directory inside the container to /source for all subsequent instructions in this stage.
 WORKDIR /source
 
-# Copy the project files and restore dependencies
-COPY ["test-web-app.csproj", "."]
+# Copy the project files to the working directory
+COPY ["source/test-web-app.csproj", "."]
+
 # Restores the NuGet dependencies based on the project file. 
 # By separating the project file copy and restore, Docker can cache this layer efficiently.
 RUN dotnet restore

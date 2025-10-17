@@ -1,3 +1,5 @@
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,14 +16,14 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
- 
+
 app.UseRouting();
 
 app.UseAuthorization();
 
-// app.MapStaticAssets();
-app.MapRazorPages();
-//    .WithStaticAssets();
+app.MapStaticAssets();
+app.MapRazorPages()
+    .WithStaticAssets();
 
 // Get the port and host from environment variables, with defaults
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
