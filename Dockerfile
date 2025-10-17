@@ -16,15 +16,6 @@ RUN dotnet restore
 # Copy the rest of the application source code
 COPY . .
 
-# Build the application
-# -c Release is for the Release configuration
-RUN dotnet build "source/test-web-app.csproj" -c Release -o /app/build
-
-# Clean the project to ensure a fresh build
-RUN dotnet clean
-RUN rm -rf ./bin
-RUN rm -rf ./obj
-
 # Publish the application (this includes the build)
 # -c Release is for the Release configuration
 # -o /app/publish sets the output directory inside the container
