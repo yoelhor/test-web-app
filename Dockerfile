@@ -14,7 +14,7 @@ COPY ["source/test-web-app.csproj", "."]
 RUN dotnet restore
 
 # Copy the rest of the application source code
-COPY . .
+COPY /source/. .
 
 # Publish the application (this includes the build)
 # -c Release is for the Release configuration
